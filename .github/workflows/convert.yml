@@ -19,5 +19,5 @@ jobs:
     - name: Run Markdown to DOCX converter
       uses: ./capt-report/.github/actions/convert-markdown
       with:
-        input_file: input.md
-        output_file: output.docx
+        input_file: ../data/input.md
+        output_file: ../data/output.docx
