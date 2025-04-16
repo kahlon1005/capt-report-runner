@@ -1,0 +1,23 @@
+name: Convert Markdown Report to DOCX
+
+on:
+  push:
+    paths:
+      - '**.md'
+
+jobs:
+  convert-report:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout capt-report-runner
+      uses: actions/checkout@v3
+
+    - name: Clone capt-report repo
+      run: git clone https://github.com/your-org/capt-report.git
+
+    - name: Run Markdown to DOCX converter
+      uses: ./capt-report/.github/actions/convert-markdown
+      with:
+        input_file: input.md
+        output_file: output.docx
