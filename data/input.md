@@ -10,6 +10,7 @@ This is a sample Markdown file.
 - List item 4
 - List item 5
 - List item 6
+- List item 7
 
 [Link to OpenAI](https://www.openai.com)
 
