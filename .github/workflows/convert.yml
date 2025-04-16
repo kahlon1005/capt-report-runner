@@ -21,3 +21,7 @@ jobs:
       with:
         input_file: ../data/input.md
         output_file: ../data/output.docx
+    - name: Verify output DOCX file
+      run: |
+        ls -l data/output.docx
+        file data/output.docx    
