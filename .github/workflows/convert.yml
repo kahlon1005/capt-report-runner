@@ -21,7 +21,14 @@ jobs:
       with:
         input_file: ../data/input.md
         output_file: ../data/output.docx
+    
     - name: Verify output DOCX file
       run: |
         ls -l data/output.docx
         file data/output.docx    
+    
+    - name: Upload output DOCX file as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: output-doc
+        path: data/output.docx
